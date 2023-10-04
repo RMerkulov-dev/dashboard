@@ -1,9 +1,9 @@
-import CSSGrid from "./components/Dashboard.tsx";
+import Dashboard from "./components/Dashboard.tsx";
 
 const App = () => {
   return (
     <>
-      <CSSGrid />
+      <Dashboard />
     </>
   );
 };

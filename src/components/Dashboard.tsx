@@ -18,7 +18,7 @@ import { Gauge, GaugeType } from "@eva-ics/webengine-react";
 
 const Dashboard = () => {
   const [selectedValue, setSelectedValue] = useState("");
-
+  //Test
   const handleChange = (event: SelectChangeEvent) => {
     setSelectedValue(event.target.value);
   };
@@ -33,8 +33,8 @@ const Dashboard = () => {
       `Row ${rowIndex + 1}, Cell 2`,
       `Row ${rowIndex + 1}, Cell 3`,
       <TableCell key={`button-${rowIndex}`}>
-        <Button variant="contained" color="primary">
-          Click {rowIndex + 1}
+        <Button variant="contained" color="primary" sx={{ padding: "5x" }}>
+          kill {rowIndex + 1}
         </Button>
         <span>{rowIndex + 1}</span>
       </TableCell>,
@@ -65,17 +65,7 @@ const Dashboard = () => {
                   id="dashboard-select"
                   value={selectedValue}
                   onChange={handleChange}
-                  sx={{
-                    backgroundColor: "transparent",
-                    color: "white",
-                    "&:focus": {
-                      backgroundColor: "transparent",
-                      borderColor: "transparent",
-                    },
-                    "&::before": {
-                      color: "#fff",
-                    },
-                  }}
+                  sx={{ backgroundColor: "transparent", border: "white" }}
                 >
                   <MenuItem value={10}>Value 1</MenuItem>
                   <MenuItem value={20}>Value 2</MenuItem>
@@ -91,13 +81,13 @@ const Dashboard = () => {
                   <Table>
                     <TableHead>
                       <TableRow>
-                        <TableCell>Column 1</TableCell>
+                        <TableCell sx={{ padding: "0px" }}>Column 1</TableCell>
                         <TableCell>Column 2</TableCell>
                       </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody sx={{ padding: "0px" }}>
                       {data_1.map((row, rowIndex) => (
-                        <TableRow key={rowIndex}>
+                        <TableRow key={rowIndex} sx={{ padding: "0px" }}>
                           {row.map((cell, cellIndex) => (
                             <TableCell key={cellIndex}>{cell}</TableCell>
                           ))}
