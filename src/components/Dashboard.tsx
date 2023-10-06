@@ -32,21 +32,9 @@ const Dashboard = () => {
     { id: 1, col1: "Row 1", col2: "Data A", col3: "Data X", col4: "Data Z" },
   ];
 
-  const data_3 = [
-    {
-      id: 1,
-      col1: "Row 1",
-      col2: "Data A",
-      col3: "Data X",
-      col4: "Data Z",
-      col5: "Data Z",
-      col6: "Data Z",
-    },
-  ];
-
   return (
-    <div className="root-container">
-      <div className="dashboard-main-wrapper">
+    <div>
+      <div className="dashboard-main-wrapper root-container">
         <div className="dashboard-main-wrapper-content">
           <div className="dashboard-main-wrapper-content__side-left">
             <div className="dashboard-select">

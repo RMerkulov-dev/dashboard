@@ -1,4 +1,7 @@
 .dashboard-main-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .dashboard-select {
@@ -40,7 +43,7 @@
 .dashboard-main-content-block_table {
   padding: 10px 12px;
   background-color: $cards-bg-color;
-  width: 320px;
+  max-width: 320px;
 
   .info-table {
     border: 0.5px solid $border-color;
@@ -61,6 +64,10 @@
   }
 }
 
+.dashboard-main-content-block__header{
+  padding: 10px 5px;
+}
+
 .content-info {
   height: 120px;
 }
@@ -78,15 +85,6 @@
   line-height: 0.8;
   letter-spacing: 0.12px;
   overflow: auto;
-
-  & th {
-    background-color: $table-header-gb;
-    padding: 7px 12px;
-  }
-
-  & td {
-    padding: 7px 20px;
-  }
 
   & button {
     display: flex;
@@ -125,13 +123,30 @@
   .dashboard-main-content-gauges {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    height: 180px;
+ max-width: 480px;
     background-color: $cards-bg-color;
+
+    @include media (desktop){
+      height: 180px;
+    }
 
   }
 }
+
+th {
+  background-color: $table-header-gb;
+  padding: 7px ;
+  font-size: 10px;
+}
+
+td {
+  padding: 7px ;
+  font-size: 10px;
+}
+
 
 
 
