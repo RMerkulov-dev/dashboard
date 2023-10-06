@@ -36,14 +36,15 @@
 
   @include media (desktop){
     flex-direction: row;
-    gap: 100px;
+
+    width: 100%;
   }
 }
 
 .dashboard-main-content-block_table {
   padding: 10px 12px;
   background-color: $cards-bg-color;
-  max-width: 320px;
+
 
   .info-table {
     border: 0.5px solid $border-color;
@@ -54,13 +55,6 @@
     letter-spacing: 0.12px;
     width: 100%;
 
-    @include media(desktop){
-      width: 380px;
-    }
-
-    td {
-      padding: 5px;
-    }
   }
 }
 
@@ -108,6 +102,8 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
+
+
 }
 
 
@@ -115,9 +111,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 
   @include media(desktop){
     margin-top: auto;
+
   }
 
   .dashboard-main-content-gauges {
@@ -126,11 +124,11 @@
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
- max-width: 480px;
     background-color: $cards-bg-color;
 
     @include media (desktop){
-      height: 180px;
+      height: 170px;
+      width: 100%;
     }
 
   }
