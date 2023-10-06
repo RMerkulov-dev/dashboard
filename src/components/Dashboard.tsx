@@ -47,24 +47,24 @@ const Dashboard = () => {
   return (
     <div className="root-container">
       <div className="dashboard-main-wrapper">
-        <div className="dashboard-select">
-          <div className="dashboard-select__connection">Connection</div>
-          <div>
-            <Select
-              className="editors-select"
-              value={selectedValue}
-              onChange={handleChange}
-            >
-              {params?.map((v) => (
-                <MenuItem key={v} value={v}>
-                  {v}
-                </MenuItem>
-              ))}
-            </Select>
-          </div>
-        </div>
         <div className="dashboard-main-wrapper-content">
           <div className="dashboard-main-wrapper-content__side-left">
+            <div className="dashboard-select">
+              <div className="dashboard-select__connection">Connection</div>
+              <div>
+                <Select
+                  className="editors-select"
+                  value={selectedValue}
+                  onChange={handleChange}
+                >
+                  {params?.map((v) => (
+                    <MenuItem key={v} value={v}>
+                      {v}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </div>
+            </div>
             <div className="dashboard-main-content-block_table">
               <div className="dashboard-main-content-block__header">
                 <h2 className="heading-h2">Node Info</h2>
@@ -158,7 +158,7 @@ const Dashboard = () => {
                 maxValue={100}
               />
             </div>
-            <div className="dashboard-main-content-block_table">
+            <div className="dashboard-main-content-block_table ">
               <div className="dashboard-main-content-block__header">
                 <h2 className="heading-h2">Cloud</h2>
               </div>

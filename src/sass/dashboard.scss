@@ -26,23 +26,34 @@
 .dashboard-main-wrapper-content {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 20px;
+
+  @include media (desktop){
+    flex-direction: row;
+    gap: 100px;
+  }
 }
 
 .dashboard-main-content-block_table {
-  margin-top: 12px;
   padding: 10px 12px;
   background-color: $cards-bg-color;
+  width: 320px;
 
   .info-table {
     border: 0.5px solid $border-color;
-    width: 100%;
     font-size: 12px;
     font-style: normal;
     font-weight: 300;
     line-height: 0.8;
     letter-spacing: 0.12px;
-    width: 380px;
+    width: 100%;
+
+    @include media(desktop){
+      width: 380px;
+    }
 
     td {
       padding: 5px;
@@ -50,11 +61,8 @@
   }
 }
 
-.dashboard-main-content-block__content {
-}
-
 .content-info {
-  height: 100px;
+  height: 120px;
 }
 .content-sessions {
   height: 200px;
@@ -97,14 +105,35 @@
   }
 }
 
+.dashboard-main-wrapper-content__side-left{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+
 .dashboard-main-wrapper-content__side-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include media(desktop){
+    margin-top: auto;
+  }
+
   .dashboard-main-content-gauges {
     display: flex;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    height: 180px;
+    background-color: $cards-bg-color;
+
   }
 }
+
+
 
 .MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
   color: $main-text-color;
