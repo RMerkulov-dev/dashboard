@@ -7,9 +7,8 @@
 .dashboard-select {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 300px;
-  gap: 30px;
 
   &__connection {
     padding: 17px;
@@ -31,7 +30,7 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
   margin-top: 20px;
 
   @include media (desktop){
@@ -45,7 +44,6 @@
   padding: 10px 12px;
   background-color: $cards-bg-color;
 
-
   .info-table {
     border: 0.5px solid $border-color;
     font-size: 12px;
@@ -54,7 +52,6 @@
     line-height: 0.8;
     letter-spacing: 0.12px;
     width: 100%;
-
   }
 }
 
@@ -64,7 +61,16 @@
 
 .content-info {
   height: 120px;
+
+  @include media(tablet){
+    height: 130px;
+  }
+
+  @include media(desktop){
+    height: 200px;
+  }
 }
+
 .content-sessions {
   height: 200px;
   overflow: auto;
@@ -94,6 +100,10 @@
     display: flex;
     align-items: center;
     gap: 5px;
+
+    @include media(desktop){
+      gap: 20px;
+    }
   }
 }
 
@@ -102,10 +112,7 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-
-
 }
-
 
 .dashboard-main-wrapper-content__side-right {
   display: flex;
@@ -115,7 +122,6 @@
 
   @include media(desktop){
     margin-top: auto;
-
   }
 
   .dashboard-main-content-gauges {
@@ -127,10 +133,9 @@
     background-color: $cards-bg-color;
 
     @include media (desktop){
-      height: 170px;
+      height: 255px;
       width: 100%;
     }
-
   }
 }
 
@@ -138,28 +143,34 @@ th {
   background-color: $table-header-gb;
   padding: 7px ;
   font-size: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  text-align: left;
+  @include media(tablet){
+    font-size: 12px;
+  }
+  @include media(desktop){
+    font-size: 14px;
+    padding: 12px;
+  }
 }
 
 td {
   padding: 7px ;
   font-size: 10px;
+
+  @include media(tablet){
+    font-size: 12px;
+  }
+  @include media(desktop){
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+.gauge-text-default-color{
+  fill: $secondary-text-color;
 }
 
 
-
-
-.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
-  color: $main-text-color;
-  background-color: $body-bg-color;
-  padding: 13px 30px;
-  outline: 1px solid $border-color;
-}
-
-.MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
-  color: $main-text-color;
-  background-color: $body-bg-color;
-}
-
-.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
-  fill: $main-text-color;
-}
